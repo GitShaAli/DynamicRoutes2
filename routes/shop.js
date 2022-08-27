@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 
 const shopController = require('../controllers/shop');
+const { route } = require('./admin');
 
 const router = express.Router();
 
@@ -16,10 +17,13 @@ router.get('/cart', shopController.getCart);
 
 router.post('/cart', shopController.postCart);
 
+router.post('/checkOut',shopController.postOrder);
+
 router.post('/cart-delete-item', shopController.postCartDeleteProduct);
 
 router.get('/orders', shopController.getOrders);
 
 router.get('/checkout', shopController.getCheckout);
+
 
 module.exports = router;
