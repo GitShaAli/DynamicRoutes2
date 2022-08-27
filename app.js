@@ -26,8 +26,11 @@ const app = express();
 
 app.use(cors());
 
+
 app.use((req,res)=>{
+  if(req.url!='?page=1'){
   res.sendFile(path.join(__dirname,`public/${req.url}`))
+  }
 })
 
 app.set('view engine', 'ejs');
