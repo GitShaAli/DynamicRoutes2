@@ -26,7 +26,9 @@ const app = express();
 
 app.use(cors());
 
-
+app.use((req,res)=>{
+  res.sendFile(path.join(__dirname,`public/${req.url}`))
+})
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');

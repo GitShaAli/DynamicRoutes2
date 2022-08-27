@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-CommerceProject</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./script.js"></script>
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+</head>
+<body>
+    <div id="ecom">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="./home.html">Home</a></li>
+                        <li style="color:rgb(158, 87, 172);">Store</li>
+                        <li><a href="./order.html">Past Orders</button></li>
+                        <li><a href="./about.html">About</a></li>
+
+                        <li>
+                            <a class="navCart" href="#" class="cartDisplay">Cart<span class="count">0</span></a>
+                        </li>
+                    </ul>
+                </nav>
+                <h1>The Generics</h1>
+            </header>
+            <section id="music" class="container">
+                <h2>S T O R E</h2>
+                <div id="section-container">
+                    <!-- <div class='show' id='showAll'>
+
+                    </div> -->
+                </div>
+                <div class="pagination" id="pagination">
+                    
+                    <button class="pButton active">1</button>
+                </div>
+            </section>
+    <!-- -------- -->
+
+    
+            <section id="cart" class="container" style="display: none;">
+                <h2>My CART</h2>
+                <div class="total">
+                    <div class="Cpagination" id="Cpagination">
+                        <!-- <button class="cButton cActive">1</button> -->
+                        <!-- <button class="cButton">2</button> -->
+                    </div>
+                    
+                    <button class="btnPurchase" type="button">CheckOut</button>
+                    <!-- <button class="dummyBtn" type="button">
+                        Total in USD ( $ ) :<span id="total" style="color:red;">0</span>
+
+                    </button> -->
+                    
+                    
+                    
+                </div>
+                <div id="cart-body">
+
+                <button class="hide" id="toggler">Continue Purchase</button>
+                </div>
+                
+                
+            </section>
+            
+            
+
+
+    <!-- -------- -->
+                <button class="see-cart">To Cart</button>
+            </div>
+            <div id="notification-container"></div>
+                <footer>
+
+                <div class="ftitle">The Generics</div>
+                <div class="ficon">
+                    <ul>
+                        <li><a href="#"><img src="./youtube.jpg" alt="YouTube"></a></li>
+                        <li><a href="#"><img src="./music+round+icon+spotify+icon-1320190507294268936.png" alt="Spotify"></a></li>
+                        <li><a href="#"><img src="./small-facebook-icon-2.jpg" alt="Facebook"></a></li>
+                    </ul>
+                </div>
+
+                </footer>
+                <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+</body>
+</html>
