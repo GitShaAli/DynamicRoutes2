@@ -27,11 +27,7 @@ const app = express();
 app.use(cors());
 
 
-app.use((req,res)=>{
-  if(req.url!='?page=1'){
-  res.sendFile(path.join(__dirname,`public/${req.url}`))
-  }
-})
+
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
@@ -55,7 +51,15 @@ app.use((req, res, next) => {
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
+app.use((req,res)=>{
+  // if(req.url!=='?page=1'){
+    // console.log("url : "+req.url)
+  res.sendFile(path.join(__dirname,`public/${req.url}`))
+  // }
+})
+
 app.use(errorController.get404);
+
 
 
 

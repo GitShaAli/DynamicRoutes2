@@ -7,7 +7,7 @@ const { route } = require('./admin');
 
 const router = express.Router();
 
-router.get('/', shopController.getIndex);
+router.get('/page', shopController.getIndex);
 
 router.get('/products', shopController.getProducts);
 

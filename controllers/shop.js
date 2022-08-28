@@ -35,7 +35,9 @@ exports.getProduct = (req, res, next) => {
 };
 
 exports.getIndex = (req, res, next) => {
+  
   const page=+req.query.page;
+  console.log("page"+page);
   const off = (page-1) * items_per_page;
   let totalItem;
   Product.findAll()

@@ -125,7 +125,7 @@ parentContainer.addEventListener('click',(e)=>{
         const remElement = document.getElementById('showAll');
         remElement.remove();     
         const pageNumber = e.target.innerHTML;
-        axios.get(`http://3.82.129.88:3000/?page=${pageNumber}`).then((res) => {
+        axios.get(`http://3.82.129.88:3000/page/?page=${pageNumber}`).then((res) => {
             showProducts(res.data.products);
             console.log(res.data.totalItem);
         })
@@ -178,7 +178,7 @@ parentContainer.addEventListener('click',(e)=>{
 window.addEventListener('DOMContentLoaded',()=>{
     const pageNumber = 1;
 
-        axios.get(`http://3.82.129.88:3000/?page=${pageNumber}`).then((res) => {
+        axios.get(`http://3.82.129.88:3000/page/?page=${pageNumber}`).then((res) => {
             showProducts(res.data.products);
             const lastPage=res.data.lastPage;
             let pageParent = document.getElementById('pagination');
